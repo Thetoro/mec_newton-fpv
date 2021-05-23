@@ -21,7 +21,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Mec-newton"
+run/main_scene="res://Menú inicial.tscn"
+run/flush_stdout_on_print.debug=false
 config/icon="res://icon.png"
+
+[autoload]
+
+menu="*res://Menú_inicial.gd"
 
 [layer_names]
 

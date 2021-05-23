@@ -8,5 +8,13 @@
 [node name="objeto" parent="." instance=ExtResource( 2 )]
 position = Vector2( 128, 160 )
 
+[node name="RichTextLabel" parent="objeto" index="2"]
+margin_left = 243.574
+margin_top = -88.6745
+margin_right = 748.574
+margin_bottom = -10.6745
+
 [node name="superficie" parent="." instance=ExtResource( 1 )]
 position = Vector2( 273.37, 274.75 )
+
+[editable path="objeto"]

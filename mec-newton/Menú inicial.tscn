@@ -1,8 +1,50 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Menú_inicial.gd" type="Script" id=2]
 
 [node name="Menú inicial" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = -1.41422
+margin_bottom = -1.41418
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="."]
+margin_left = 97.3015
+margin_top = 98.1005
+margin_right = 407.301
+margin_bottom = 133.1
+text = "Escoge la escena de fricción"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="."]
+margin_left = 66.1888
+margin_top = 139.858
+margin_right = 440.189
+margin_bottom = 250.858
+items = [ "Hule en concreto", null, false, "Cobre en acero", null, false, "Mader encerada en hielo humedo", null, false ]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 340.343
+margin_top = 287.0
+margin_right = 438.343
+margin_bottom = 322.0
+text = "Aceptar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="item_rmb_selected" from="ItemList" to="." method="_on_ItemList_item_rmb_selected"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
